@@ -22,34 +22,26 @@ public class ChangeColorPanel : MonoBehaviour
 
 
    public void ChangeColorCocaine()
-    {
-      
-            panelColorDrugs.SetActive(true);
-        panelColorDrugs.GetComponent<Image>().color = magenta;
-       
+    {    
+        panelColorDrugs.SetActive(true);
+        panelColorDrugs.GetComponent<Image>().color = magenta;       
     }
 
     public void ChangeColorHash()
     {
-
         panelColorDrugs.SetActive(true);
         panelColorDrugs.GetComponent<Image>().color = green;
-
     }
 
     public void ChangeColorSpeed()
     {
-
         panelColorDrugs.SetActive(true);
         panelColorDrugs.GetComponent<Image>().color = yellow;
-
     }
 
     public void ChangeColorMeth()
     {
-
         panelColorDrugs.SetActive(true);
         panelColorDrugs.GetComponent<Image>().color = blue;
-
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void Start() {
+    void Start()
+    {
         FindObjectOfType<AudioManager>().Stop("MainTheme");
         FindObjectOfType<AudioManager>().Play("MenuTheme");
     }
