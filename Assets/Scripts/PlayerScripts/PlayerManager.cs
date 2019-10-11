@@ -49,7 +49,6 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
-
         CocaineFillAmount = CocaineIcon.fillAmount;
         HashFillAmount = HashIcon.fillAmount;
         SpeedFillAmount = SpeedIcon.fillAmount;
@@ -97,7 +96,7 @@ public class PlayerManager : MonoBehaviour
 
         if (LifeBar.fillAmount <= .5f && LifeBarRest.fillAmount > .25f)
             anim.SetBool("IsTired", true);
-       else anim.SetBool("IsTired", false);
+        else anim.SetBool("IsTired", false);
 
 
         if (LifeBar.fillAmount <= .25f)
@@ -192,10 +191,8 @@ public class PlayerManager : MonoBehaviour
 
     public IEnumerator UpdateMethAmount()
     {
-
         if (SpeedFillAmount > 0)
-        {
-            
+        {           
             SpeedFillAmount -= 1.0f / player.GetComponent<DrugsMechanics>().GetTimeDrugActive() * Time.deltaTime;
             MethIcon.fillAmount = MethFillAmount;
             yield return new WaitForSeconds(1f);
@@ -207,11 +204,8 @@ public class PlayerManager : MonoBehaviour
     public IEnumerator MakeRandomBlink()
     {
         yield return new WaitForSeconds(1f);
-
         randomNumberBlink = Random.Range(0, 25);
-
         if (randomNumberBlink == 5 && randomNumberYawn != 5)
-
         randomNumberBlink = Random.Range(0, 25);
     }
 
@@ -248,9 +242,7 @@ public class PlayerManager : MonoBehaviour
     public void RestLife()
     {
         if (LifeBarRest.fillAmount > amount)
-        {
-            LifeBarRest.fillAmount -= Time.deltaTime / restLifeRate;
-        }
+            LifeBarRest.fillAmount -= Time.deltaTime / restLifeRate;      
     }
 
     public void RestLifeDeltaTime()
@@ -275,10 +267,7 @@ public class PlayerManager : MonoBehaviour
     public void AddLife(float lifeToAdd)
     {
         if (LifeBar.fillAmount > lifeToAdd)
-        {
-
             LifeBar.fillAmount += Time.deltaTime / restLifeRate;
-        }
     }
 
     public void AddAmount(float lifeToAmount)
